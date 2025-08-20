@@ -10,23 +10,30 @@ body {
   padding: 0;
 }
 
+
 header {
-  background-image: url("../imagenes/triple-baka.jpg");
-  background-size: cover;
-  background-position: center;
-  height: 250px;
+  height: 250px;          /* Ajusta altura del header */
+  width: 100%;
+  position: relative;     /* Necesario para posicionar la imagen en esquina */
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
-  text-shadow: 2px 2px 5px black;
 }
 
-header h1 {
-  font-size: 3rem;
-  font-weight: bold;
+.titulo-header {
+  max-height: 100px; /* Tamaño del gif del título */
+  width: auto;
 }
 
+/* Imagen Triple Baka en una esquina */
+.triple-baka {
+  position: absolute;
+  bottom: 10px;   /* Mover hacia abajo */
+  right: 10px;    /* Mover hacia la derecha */
+  width: 120px;   /* Tamaño reducido */
+  height: auto;
+  border-radius: 10px; /* Opcional: bordes redondeados */
+}
 /* ====== TEXTO PRINCIPAL ====== */
 .titulo-secundario {
   font-family: Arial, sans-serif;
