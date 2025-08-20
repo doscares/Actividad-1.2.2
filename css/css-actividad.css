@@ -2,6 +2,7 @@
 body {
   font-family: Arial, sans-serif;
   background-image: url("../imagenes/fondo_index.webp");
+  
   background-size: cover;
   background-position:top;
   background-repeat: no-repeat;
@@ -9,13 +10,11 @@ body {
   padding: 0;
 }
 
-/* ====== HEADER ====== */
 header {
-  background-image: url("../triple-baka.jpg"); /* Ajusta la ruta según tu proyecto */
-  background-size: 650px;   /* Muestra la imagen completa */
-  background-repeat: no-repeat; /* Evita que se repita */
+  background-image: url("../imagenes/triple-baka.jpg");
+  background-size: cover;
   background-position: center;
-  height: 30vh; /* Ocupar toda la pantalla */
+  height: 250px;
   display: flex;
   justify-content: center;
   align-items: center;
