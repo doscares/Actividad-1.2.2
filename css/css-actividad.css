@@ -9,11 +9,13 @@ body {
   padding: 0;
 }
 
+/* ====== HEADER ====== */
 header {
-  background-image: url("../img/Triple_Baka.webp"); /* Ajusta la ruta a donde guardaste la imagen */
-  background-size: cover;
+  background-image: url("../triple-baka.jpg"); /* Ajusta la ruta según tu proyecto */
+  background-size: 650px;   /* Muestra la imagen completa */
+  background-repeat: no-repeat; /* Evita que se repita */
   background-position: center;
-  height: 250px;
+  height: 30vh; /* Ocupar toda la pantalla */
   display: flex;
   justify-content: center;
   align-items: center;
