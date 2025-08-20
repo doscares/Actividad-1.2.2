@@ -1,7 +1,10 @@
 /* Estilos generales */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f8f9fa;
+  background-image: url("../imagenes/fondo_index.webp");
+  background-size: cover;
+  background-position:top;
+  background-repeat: no-repeat;
   margin: 0;
   padding: 0;
 }
