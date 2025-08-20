@@ -6,6 +6,40 @@ body {
   padding: 0;
 }
 
+header {
+  background-image: url("../img/Triple_Baka.webp"); /* Ajusta la ruta a donde guardaste la imagen */
+  background-size: cover;
+  background-position: center;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-shadow: 2px 2px 5px black;
+}
+
+header h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+/* ====== TEXTO PRINCIPAL ====== */
+.titulo-secundario {
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+}
+
+#parrafo-unico {
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.descripcion {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+}
+
 /* Estilos para el footer */
 footer {
   background-color: #000000;
