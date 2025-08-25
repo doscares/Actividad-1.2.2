@@ -1,0 +1,11 @@
+    body {
+        background-image: url('../imagenes/BenjaBigote.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    header {
+        color: violet;
+    }
+    footer {
+        color: violet;
+    }

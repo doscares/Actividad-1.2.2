@@ -11,18 +11,27 @@
 </head>
 <body>
     <header>
-        <div class="container text-center my-5">
+        <div class="container text-center" name="header-container">
             <h1 class="titulo-secundario">Página de Benjamín</h1>
             <p id="parrafo-unico">Bienvenido a la página de Benjamín Pinto</p>
-            <p class="descripcion"> Aquí encontrarás información sobre mí y mis intereses. </p>
+            <p class="descripcion"> Aquí encontrarás información sobre mí y mis intereses.</p>
+        </div>
     </header>
     <main>
         <div class="btn-group " role="group" aria-label="Botones de seleccion de información">
             <a class="btn btn-primary" href="https://drive.google.com/uc?export=download&id=10sL7Y3da6pUJNKQsMlSPMKrCEKgnOS9p">Descargar Currículum</a>
         </div>
+
+        <div class="container text-center my-5">
+            <h2 class="titulo-calcEdad">Calculadora Edad</h2>
+            <textarea id="input-edad"></textarea>
+            <button class="btn btn-primary" id="calcular-btn">Calcular Edad</button>
+        </div>
     </main>
-    <footer>
+    <footer class="fixed-bottom">
+        <a class="btn btn-secondary" href="../htmls/index.html" role="button">Volver al Inicio</a>
         <p>&copy; 2025 Página de Benjamin</p>
     </footer>
+    <script src="../JS/calcEdad.js"></script>
 </body>
 </html>
