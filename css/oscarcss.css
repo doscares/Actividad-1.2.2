@@ -1,0 +1,176 @@
+/* ====== Variables de diseño ====== */
+:root {
+  --bg-blur: 10px;
+  --glass: rgba(255,255,255,0.12);
+  --glass-strong: rgba(255,255,255,0.22);
+  --text: #f5f7fb;
+  --accent: #67e8f9;
+  --accent-2: #22d3ee;
+  --shadow: 0 10px 30px rgba(0,0,0,.25);
+  --radius: 22px;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; }
+
+body {
+  font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  color: var(--text);
+  display: grid;
+  place-items: center;
+  background-color: #0b1220;
+  overflow-x: hidden;
+}
+
+/* Fondo */
+.bg {
+  position: fixed;
+  inset: 0;
+  /* Inserta aquí la URL del fondo en Pinterest */
+  background-image: url('../imagenes/Miku\ Fondos\ De\ Pantalla\ Pc.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: saturate(1.05) contrast(1.05);
+  z-index: -2;
+}
+
+.bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(1200px 600px at 70% 20%, rgba(11,18,32,.15), rgba(11,18,32,.55)),
+              linear-gradient(to top, rgba(11,18,32,.75), rgba(11,18,32,.25));
+  z-index: -1;
+}
+
+/* Tarjeta principal */
+.card {
+  width: min(920px, 92vw);
+  padding: clamp(18px, 4vw, 36px);
+  backdrop-filter: blur(var(--bg-blur));
+  -webkit-backdrop-filter: blur(var(--bg-blur));
+  background: linear-gradient(180deg, var(--glass), transparent) border-box;
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+/* Header */
+.header {
+  display: grid;
+  grid-template-columns: 84px 1fr auto;
+  gap: 18px;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.avatar {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  background: var(--glass-strong);
+  border: 2px solid rgba(255,255,255,0.25);
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  font-size: 26px;
+}
+
+/* Títulos */
+.title h1 { margin: 0; font-size: clamp(28px, 4.6vw, 44px); font-weight: 700; }
+.title p { margin: 6px 0 0; opacity: .9; font-weight: 300; }
+
+.badge {
+  justify-self: end;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #06252a;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: .4px;
+  box-shadow: inset 0 0 0 2px rgba(255,255,255,.35);
+  white-space: nowrap;
+}
+
+/* Contenido y botones */
+.content { margin-top: 18px; }
+.content p { margin: 0 0 14px; opacity: .95; }
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.btn {
+  appearance: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  color: #051c20;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  padding: 12px 18px;
+  border-radius: 14px;
+  font-weight: 700;
+  box-shadow: var(--shadow);
+  transition: transform .15s ease, filter .15s ease;
+}
+
+.btn:hover { transform: translateY(-2px); filter: brightness(1.05); }
+
+.btn.ghost {
+  background: rgba(255,255,255,.12);
+  color: var(--text);
+  border: 1px solid rgba(255,255,255,.24);
+}
+
+.btn.ghost:hover { background: rgba(255,255,255,.18); }
+
+
+.btn.back {
+  background: rgba(255, 255, 255, 0.15);
+  color: var(--text);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.btn.back:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+
+/* Footer */
+footer {
+  margin-top: 26px;
+  opacity: .8;
+  font-size: 13px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+footer a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px dashed transparent;
+}
+
+footer a:hover { border-bottom-color: var(--accent); }
+
+/* Responsive */
+@media (max-width: 640px) {
+  .header {
+    grid-template-columns: 64px 1fr;
+  }
+  .badge {
+    grid-column: 1 / -1;
+    justify-self: start;
+    margin-top: 6px;
+  }
+  .avatar {
+    width: 64px;
+    height: 64px;
+    font-size: 20px;
+  }
+}

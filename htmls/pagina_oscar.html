@@ -1,3 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
 <head>
-    img
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Presentación | Tu Nombre</title>
+  <link rel="stylesheet" href="../css/oscarcss.css" />
 </head>
+<body>
+  <!-- Fondo con imagen de Hatsune Miku -->
+  <div class="bg" aria-hidden="true"></div>
+
+  <main class="card" role="main">
+    <div class="header">
+      <div class="avatar" aria-hidden="true">TN</div>
+      <div class="title">
+        <h1>¡Hola! Soy Oscar Sepulveda</h1>
+        <p>Desarrollador en formación | Fan de Vocaloid 💙</p>
+      </div>
+      <div class="badge">Portafolio</div>
+    </div>
+
+    <section class="content">
+      <p>
+        Bienvenido(a) a mi página de presentación. Aquí encontrarás mis proyectos,
+        las tecnologías que utilizo y cómo contactarme. El fondo de pantalla es una ilustración
+        de Hatsune Miku que le da un toque vibrante y elegante.
+      </p>
+
+      <div class="actions">
+        <a class="btn" href="#proyectos">Ver proyectos</a>
+        <a class="btn ghost" href="#contacto">Contacto</a>
+        <a class="btn ghost" href="#cv">Descargar CV</a>
+
+          <a class="btn back" href="index.html">⬅ Volver a inicio</a>
+      </div>
+    </section>
+
+    <footer>
+      <span>© <span id="year"></span> Oscar </span>
+      <span>·</span>
+      <a href="#" aria-label="GitHub">GitHub</a>
+      <span>·</span>
+      <a href="#" aria-label="LinkedIn">LinkedIn</a>
+      <span>·</span>
+      <a href="mailto:tucorreo@example.com">oscar1puerta@gmail.com</a>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
