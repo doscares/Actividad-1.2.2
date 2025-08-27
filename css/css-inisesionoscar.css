@@ -1,0 +1,9 @@
+body {
+  background: url("../imagenes/nyan-cat.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+.form-box {
+  max-width: 400px;
+  background-color: rgba(255, 255, 255, 0.9);
+}

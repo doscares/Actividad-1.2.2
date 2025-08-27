@@ -31,8 +31,9 @@
         <a class="btn" href="#proyectos">Ver proyectos</a>
         <a class="btn ghost" href="#contacto">Contacto</a>
         <a class="btn ghost" href="#cv">Descargar CV</a>
-
-          <a class="btn back" href="index.html">⬅ Volver a inicio</a>
+        <a class="btn back" href="index.html">⬅ Volver a inicio</a>
+        <!-- 🔴 Nuevo botón de cerrar sesión -->
+        <button class="btn ghost" onclick="cerrarSesion()">Cerrar sesión</button>
       </div>
     </section>
 
@@ -49,6 +50,15 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    function cerrarSesion() {
+      // Borrar sesión del localStorage y sessionStorage
+      localStorage.removeItem("sesionActiva");
+      sessionStorage.removeItem("sesionActiva");
+
+      // Redirigir al login
+      window.location.href = "index.html";
+    }
   </script>
   <script src="../JS/miku.js"></script>
 </body>
